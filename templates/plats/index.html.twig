@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos Plats
+{% endblock %}
+
+{% block body %}
+	<div class="video-section">
+		<video class="top-video" autoplay loop muted>
+			<source src="{{ asset('video/vid1.mp4') }}" type="video/mp4">
+		</video>
+	</div>
+
+
+	<div class="col-12 p-4 mb-md-3 ">
+		<div class="container text-start">
+			<p class="fs-3">La meilleure cuisine arménienne avec les meilleurs plats vous attend!<br>
+				Allez découvrir notre intéressant plats arménien.</p>
+		</div>
+
+		<p class="d-grid gap-2 col-6 mx-auto p-5">
+			<a href="{{ path('plats') }}" class="btn btn-success active" role="button" data-bs-toggle="button" aria-pressed="true">Nos Plats</a>
+		</p>
+
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded-circle">
+					<img class="img1 rounded-circle" src="{{ asset('img/L.webp') }}" alt="Xorovac">
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded-circle">
+					<img class="img1 rounded-circle" src="{{ asset('img/dolma.jpg') }}" alt="Tolma">
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded-circle">
+					<img class="img1 rounded-circle" src="{{ asset('img/yarax.jpg') }}" alt="Garni">
+				</div>
+			</div>
+		</div>
+
+		{% if app.plats is defined %}
+			<select>
+				<option value="{{ path('plats') }}">Plats</option>
+			</select>
+		{% endif %}
+	</div>
+{% endblock %}

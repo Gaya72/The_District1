@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Categorie
+{% endblock %}
+{% block content %}{% endblock %}
+{% block body %}
+	<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+		<div class="carousel-indicators">
+			{% for i in 0..4 %}
+				<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{ i }}" class="{{ i == 0 ? 'active' : '' }}" aria-label="Slide {{ i + 1 }}"></button>
+			{% endfor %}
+		</div>
+
+		<div class="carousel-inner">
+			{% for image in img %}
+				<div class="carousel-item {{ loop.first ? 'active' }}">
+					<img src="{{ asset('img/' ~ image) }}" class="d-block w-100" alt="...">
+
+					<div class="carousel-caption d-none d-md-block">
+						<h2>Bienvenue</h2>
+						<p class="fs-2">À notre maisonnette à saveurs</p>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		</button>
+	</div>
+
+	<p class="d-grid gap-2 col-6 mx-auto p-5">
+		<a href="{{ path('categorie') }}" class="btn btn-success" role="button">Categorie</a>
+	</p>
+
+	<div class="container">
+		<div class="row">
+			{% set categories = [
+                {'image': 'img/mecapse.jpg', 'title': 'À Partager', 'subtitle': 'Կիսվելու', 'text': 'S’inspirant de la cuisine arménienne...'},
+                {'image': 'img/manti.jpg', 'title': 'Entrées', 'subtitle': 'Ուտեստներ', 'text': 'Some quick example text...'},
+                {'image': 'img/tolma.jpg', 'title': 'Plats', 'subtitle': 'Ուտեստներ', 'text': 'Some quick example text...'},
+                {'image': 'img/gini.jpeg', 'title': 'Les Boissons', 'subtitle': 'Խմիչք', 'text': 'Some quick example text...'},
+                {'image': 'img/gata.jpg', 'title': 'Desserts', 'subtitle': 'Դեսերտներ', 'text': 'Some quick example text...'},
+                {'image': 'img/tey.jpeg', 'title': 'Boissons Chaudes', 'subtitle': 'Տաք Խմիչքներ', 'text': 'Some quick example text...'}
+            ] %}
+
+			{% for category in categories %}
+				<div class="col-sm-4">
+					<div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded-4">
+						<div class="text-center">
+							<div class="card">
+								<div class="zoom-opacity">
+									<img src="{{ asset(category.image) }}" class="img1 card-img-top" alt="{{ category.title }}">
+									<div class="card-body">
+										<h3 class="card-title"><br>{{ category.title }}</h3>
+										<h5>{{ category.subtitle }}</h5>
+										<p class="card-text">{{ category.text }}</p>
+										<a href="{{ path('categorie') }}" class="btn btn-warning">Voir plus</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+
+	<div class="video-section">
+		<video class="bottom-video" autoplay loop muted>
+			<source src="{{ asset('video/vid1.mp4') }}" type="video/mp4">
+		</video>
+	</div>
+
+{% endblock %}

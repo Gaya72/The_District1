@@ -1,0 +1,240 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  box-shadow: 0 0 20px rgb(11, 82, 11);
+  background-color: rgb(89, 92, 91);
+  
+}
+
+.navbar .logo {
+  height: 40px;
+  margin: 0 20px;
+  /*logo place a gauche */
+}
+
+.nav-item {
+  text-shadow: 2px 0 black, 0 1px white, 1px 0 black, 0 -1px white;
+  font-family: 'Kaushan Script', cursive;
+  display: inline;
+  font-size: 18px;
+  text-align: center;
+  margin: 0 20px;
+}
+
+ul a:visited {
+  color: rgb(238, 178, 13);
+}
+.navbar-toggler-icon {
+  filter: invert(3); /* Դարձնում է սպիտակ գույն */
+}
+.footer {
+    box-shadow: 0 0 20px rgb(11, 82, 11);
+    background-color: rgb(1, 10, 1);
+    opacity: 70%;
+}
+  
+.img1 {
+  width: 100%;
+  height: 300px;
+  box-shadow: 0 0 30px rgba(70, 3, 3, 0.5);
+  /* l'ombre uniform */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+.img1:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.zoom-opacity img:hover {
+  transform: scale(1.2);
+  /* 20%-ով մեծացում */
+  opacity: 0.7;
+  /* Թափանցիկության նվազեցում */
+}
+
+.zoom-shadow img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(32, 32, 32, 0.2);
+  /* Սկզբնական ստվեր */
+}
+
+.zoom-shadow img:hover {
+  transform: scale(1.1);
+  /* Մեծացում */
+  box-shadow: 0 10px 15px rgba(15, 15, 15, 0.4);
+  /* Ստվերի ուժեղացում */
+}
+
+h1 {
+  color: rgb(185, 7, 7) !important;
+font-size: 16;
+  font-family: 'Kaushan Script', cursive;
+  text-align: center;
+}
+
+h2 {
+  color: rgb(185, 7, 7) !important;
+  font-size: 46;
+  letter-spacing: 6px;
+  font-family: 'Kaushan Script', cursive;
+}
+
+h3,
+h4 {
+  font-family: 'Kaushan Script', cursive;
+}
+
+.small-text {
+  font-size: 14px;
+}
+.card-text {
+  color: rgb(90, 87, 87);
+  font-size: medium;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.fs-1 {
+  color: white;
+}
+
+.p, p {
+  font-family: 'Kaushan Script', cursive;
+  color: white;
+}
+
+/* l'image est calibrée et mise à l'échelle correctement */
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ajuste l'image pour l'adapter à l'arrière-plan*/
+}
+
+.carousel-item {
+  height: 700px;
+}
+
+.bottom-video {
+  width: 100%;
+  /* Վիդեոն հարմարվում է լայնությանը */
+  height: 100%;
+  /* Վիդեոն հարմարվում է բարձրությանը */
+  object-fit: cover;
+  /* Կտրում կամ լրացնում է, որպեսզի վիդեոն տեղավորվի */
+}
+.video-section {
+  width: 100%;
+  /* Վիդեոն զբաղեցնում է 100% լայնություն */
+  height: 70vh;
+  overflow: hidden;
+}
+
+.top-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.background-video video {
+  position: fixed;
+  /* Fixe la vidéo à l'écran */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Couvre tout l'écran sans déformer l'image */
+  z-index: -2;
+  /* Met la vidéo derrière le contenu */
+}
+
+/* Ajuster le texte pour le rendre lisible */
+.content h2,
+.content p {
+  background-color: rgba(248, 243, 243, 0.993);
+  /* Fond semi-transparent */
+  display: inline-flex;
+  padding: 0 30px;
+  border-radius: 8px;
+}
+
+.form-select {
+ color: rgb(196, 30, 30) !important;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  font-family: 'Kaushan Script', cursive;
+}
+.section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('/path-to-your-image.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Պատկերների միջև հեռավորություն */
+  margin: 10px 0;
+}
+
+.mt-1 {
+  margin-top: 10px;
+}
+
+footer {
+  max-height: 200px; /* Կոշտ սահմանափակող բարձրություն */
+  overflow: hidden; /* Հեռացնում է ավելորդ բովանդակությունը */
+}
+
+.item {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+
+.full-screen-img {
+  width: 100vw; /* Полная ширина экрана */
+  height: 100vh; /* Полная высота экрана */
+  object-fit: cover; /* Масштабирование изображения без искажений */
+}
+
+.img2 {
+  width: 100%;
+  height: 500px;
+}
+.img3-thumbnail {
+  width: 50px; /* Փոխիր ըստ կարիքի */
+  height: 50px; /* Համաչափության համար */
+  object-fit: cover; /* Կտրում է նկարը, պահելով համաչափությունը */
+  border-radius: 8px; /* Կլորացված անկյուններ */
+  margin: 5px; /* Տարածություն նկարների միջև */
+}
+
+@media (max-width: 768px) {
+  .d-flex.flex-wrap {
+      justify-content: center; /* Կենտրոնացնում է նկարները */
+  }
+  .img3-thumbnail {
+      width: 60px;
+      height: 60px;
+  }
+}

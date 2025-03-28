@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil
+{% endblock %}
+
+
+{% block body %}
+	<div class="background-video">
+		<video autoplay loop muted controls>
+			<source src="{{ asset('video/vid1.mp4') }}" type="video/mp4">
+		</video>
+
+		<div class="section">
+			<div class="content">
+				<h2>Maisonnette à Saveurs</h2>
+				<select class="form-select" aria-label="Default select example" id="menuSelect">
+					<option selected disabled>Notre Menu</option>
+					<option value="{{ path('categorie') }}">Categories</option>
+					<option value="{{ path('plats') }}">Plats</option>
+					<option value="{{ path('contact') }}">Commandes</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="containertext-center">
+			<h1>DECOUVREZ LES SAVEURS D'ARMENIE</h1>
+			<p class="fs-1">La cuisine arménienne a une histoire vieille de plusieurs siècles. C’est diversifié et unique. La cuisine nationale a ses propres plats uniques qui attirent le cœur de tous les touristes. Les Arméniens sont très hospitaliers, ce qui rend la cuisine arménienne encore plus chaleureuse et unique.</p>
+		</div>
+
+	</div>
+{% endblock %}
